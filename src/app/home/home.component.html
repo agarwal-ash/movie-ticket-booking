@@ -1,0 +1,29 @@
+<div class="main">
+  <nav class="navbar">
+    <div class="logo">Movie Cupid</div>
+    <h3>Now Streaming</h3>
+    <ul class="nav-links">
+      <div class="menu">
+        <button (click)="ShowEnglish()">English</button>
+        <button (click)="ShowHindi()">Hindi</button>
+        <li><a (click)="RedirectHome()">Home</a></li>
+        <li><a (click)="RedirectDetails()">Details</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <div class="cards">
+    <div class="card" *ngFor="let i of posts">
+      <img src="{{ i.image }}" alt="" style="object-fit: fill" class="p1" />
+      <div class="content">
+        <div class="name" style="text-align: center">{{ i.name }}</div>
+        <br />
+        <br />
+        <div class="overlay"></div>
+      </div>
+      <div class="button" (click)="movieDetails(i)">
+        <a routerLinkActive="active" ariaCurrentWhenActive="page"> BOOK </a>
+      </div>
+    </div>
+  </div>
+</div>

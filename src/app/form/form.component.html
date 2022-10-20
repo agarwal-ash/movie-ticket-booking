@@ -1,0 +1,66 @@
+<body>
+    <div class="container">
+        <header>Movie Cupid</header>
+        <!-- <h3 style="color: white;">Seats Available: {{TotalSeats}}</h3> -->
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" (mouseout)="assignName($event)">
+                        </div>
+
+                       
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter your email" (mouseout)="assignEmail($event)">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" (mouseout)="assignNumber($event)">
+                        </div>
+
+                        <div class="input-field" >
+                            <label>Show Time</label>
+                            <select required (mouseleave)="assignShowTime($event)">
+                                <option value="" disabled selected hidden>Select</option>
+                                <option>morning</option>
+                                <option>evening</option>
+                                <option>night</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Number Of Seats</label>
+                            <input type="number" placeholder="Enter seats required" (mouseleave)="inputSeats($event)">
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <label>Seats Available</label>
+                            <input type="text" value="{{TotalSeats}}" readonly>
+                        </div>
+
+
+                        
+
+                        <button class="sumbit" (click)="checkout()" style="color: white;">
+                            <span class="btnText" routerLinkActive="active" ariaCurrentWhenActive="page">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+           
+        </form>
+    </div>
+</body>
+    
+
+

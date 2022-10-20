@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+body {
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29Ip_-DJqmlxfl51K0OBFmrK9_uqG7eHovg&usqp=CAU"); */
+  background-repeat: no-repeat;
+  margin: 0px;
+  height: 576px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+  background-color: black;
+}
+
+* {
+  /* margin: 0;
+    padding: 0; */
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.form.first {
+  padding-left: 20px;
+  margin-left: 17px;
+  margin-top: 100px;
+  padding-right: 20px;
+}
+
+.container header {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  text-decoration: double;
+}
+
+.container form {
+  position: relative;
+  margin-top: 16px;
+  min-height: 490px;
+  overflow: hidden;
+}
+.container form .form {
+  position: absolute;
+  transition: 0.3s ease;
+}
+
+form.secActive .form.first {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+}
+.container form .title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: #333;
+}
+.container form .fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form .fields .input-field {
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+.input-field label {
+  font-size: 15px;
+  font-weight: 1000;
+  color: white;
+}
+.input-field input,
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+.input-field select,
+.input-field input[type="date"] {
+  color: #707070;
+}
+.input-field input[type="date"]:valid {
+  color: #333;
+}
+
+.input-field:hover {
+  box-shadow: #2e2e2e;
+}
+.container form button,
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 25px 0;
+  background-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  padding-left: 600px;
+}
+.container form .btnText {
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid white;
+  padding: 10px 15px;
+}
+form button:hover {
+  background-color: teal;
+}
+form .btnText:hover {
+  transform: scale(1.5, 1.5);
+}
+form button i,
+form .backBtn i {
+  margin: 0 6px;
+}
+form .backBtn i {
+  transform: rotate(180deg);
+}
+form .buttons {
+  display: flex;
+  align-items: center;
+}
+form .buttons button,
+.backBtn {
+  margin-right: 14px;
+}
+
+@media (max-width: 750px) {
+  .container form {
+    overflow-y: scroll;
+  }
+  .container form::-webkit-scrollbar {
+    display: none;
+  }
+  form .fields .input-field {
+    width: calc(100% / 2 - 15px);
+  }
+}
+
+@media (max-width: 550px) {
+  form .fields .input-field {
+    width: 100%;
+  }
+}
